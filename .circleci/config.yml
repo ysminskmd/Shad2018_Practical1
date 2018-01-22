@@ -36,4 +36,7 @@ jobs:
           destination: apks
       - deploy:
           name: Deploy APK.
-          command: bash ./deploy-hockey-dev.sh
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              bash ./scripts/deploy-hockey.sh
+            fi
