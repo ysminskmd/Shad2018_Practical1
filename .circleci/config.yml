@@ -39,4 +39,5 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               bash ./scripts/deploy-hockey.sh
+              bash ./scripts/deploy-fabric.sh
             fi
